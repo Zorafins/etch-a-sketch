@@ -1,0 +1,12 @@
+.square {
+    height: 50px;
+    width: 50px;
+    background: white;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#container {
+    height: 960px;
+    width: 960px;
+}
