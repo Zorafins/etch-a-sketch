@@ -21,7 +21,7 @@ newgrid.addEventListener("click", function(){
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
-  let squaresPerSide = prompt("How many squares would you like on each side?");
+  let squaresPerSide = prompt("How many squares would you like on each side?", "16");
   createGrid(squaresPerSide);
 })
 
