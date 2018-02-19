@@ -3,12 +3,14 @@
 const container = document.querySelector('#container');
 const newgrid = document.querySelector('#newgrid')
 
-// Function to create a new grid
+// Create a new grid
 
 function createGrid(squaresPerSide) {
   for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
+    square.style.width = (750 / squaresPerSide - 2).toString() + 'px';
+    square.style.height = (750 / squaresPerSide - 2).toString() + 'px';
     container.appendChild(square);
   }
 }
@@ -19,7 +21,7 @@ newgrid.addEventListener("click", function(){
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
-  let squaresPerSide = prompt("Please enter how many squares per side");
+  let squaresPerSide = prompt("How many squares would you like on each side?");
   createGrid(squaresPerSide);
 })
 
